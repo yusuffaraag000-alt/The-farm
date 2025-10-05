@@ -1,0 +1,41 @@
+/* تأثير عام للصفحات */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #e8ffe8; /* أخضر فاتح */
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* عند الخروج من الصفحة */
+.fade-out {
+  opacity: 0;
+}
+
+/* عند الدخول */
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* أزرار تنقل شكلها احترافي */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}

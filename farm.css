@@ -1,0 +1,159 @@
+/* ==== General Page Styling ==== */
+body {
+  margin: 0;
+  background: #f6fff6;
+  font-family: "Poppins", sans-serif;
+  color: #1b3a1b;
+  overflow-x: hidden;
+  transition: background 0.5s ease-in-out;
+}
+
+/* ==== Header ==== */
+.main-header {
+  text-align: center;
+  background: linear-gradient(135deg, #a9f1a9, #d4ffd4);
+  padding: 80px 20px;
+  border-bottom: 5px solid #4caf50;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.header-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  color: #155d15;
+}
+.header-content p {
+  max-width: 700px;
+  margin: 15px auto;
+  font-size: 18px;
+  color: #204820;
+  opacity: 0.9;
+}
+.green-line {
+  width: 80px;
+  height: 4px;
+  background: #4caf50;
+  margin: 25px auto 0;
+  border-radius: 2px;
+}
+
+/* ==== Breed Cards ==== */
+.breeds-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 35px;
+  padding: 60px 8%;
+}
+.breed {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #c8e6c9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.breed:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.breed h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+.breed p {
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.breed img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #a5d6a7;
+  cursor: pointer;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.breed img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* ==== Side Panel ==== */
+.side-panel {
+  position: absolute;
+  right: -380px;
+  width: 340px;
+  background: #ffffff;
+  border-left: 4px solid #4caf50;
+  box-shadow: -6px 0 15px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  border-radius: 15px 0 0 15px;
+  transition: right 0.5s ease;
+  z-index: 1000;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+.side-panel.active {
+  right: 0;
+}
+.side-panel h3 {
+  color: #2e7d32;
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+.side-panel p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+.close-btn:hover {
+  background: #388e3c;
+}
+
+/* ==== Blur Effect ==== */
+.blur {
+  filter: blur(4px);
+  opacity: 0.4;
+  pointer-events: none;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  background: #c8e6c9;
+  padding: 25px;
+  border-top: 4px solid #81c784;
+  color: #1b3a1b;
+  font-size: 15px;
+}
+footer span {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+
+body {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+body.fade-in {
+  opacity: 1;
+}
+
+
+

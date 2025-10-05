@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Farm</title>
+
+  <!-- ربط ملف التنسيق -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- أيقونة الموقع (favicon) -->
+  <link rel="icon" type="image/png" href="logo.jpg.jpg">
+
+  <style>
+    /* ==== تأثيرات الانتقال ==== */
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      background-color: #f4fff4;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+    /* ==== الجملة الجانبية ==== */
+    .update-note {
+      position: fixed;
+      bottom: 15px;
+      right: 20px;
+      background: rgba(76, 175, 80, 0.9);
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-transition"></div>
+
+  <div class="content">
+    <h1>The Farm</h1>
+
+    <button id="goStart" class="enter-button" onclick="enterSite(this)">
+  <h4>Enter the Farm</h4>
+</button>
+
+    <div class="designer">
+      <h3>Model improvement and web design by Yusuffaraag</h3>
+    </div>
+  </div>
+
+  <!-- اللوجو في اليسار -->
+  <img src="logo.jpg.jpg" alt="Logo" 
+       style="position:absolute;
+              top:20px;
+              left:20px;
+              width:100px;
+              height:auto;
+              border-radius:8px;">
+
+  <!-- الصورة الثانية في اليمين -->
+  <img src="faraag.jpg" alt="Faraag Logo"
+       style="position:absolute;
+              top:20px;
+              right:20px;
+              width:100px;
+              height:auto;
+              border-radius:8px;">
+
+  <!-- الجملة الجديدة -->
+  <div class="update-note">Under Development & Updates</div>
+
+  <!-- كود الجافا سكريبت -->
+  <script>
+    // تشغيل التأثير عند تحميل الصفحة
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+    });
+
+    // تأثير الانتقال بين الصفحات
+    function enterSite() {
+      document.body.classList.remove("fade-in");
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "farm.html";
+      }, 900); // مدة الترانزيشن قبل الانتقال
+    }
+  </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
+
+  const links = document.querySelectorAll("a, button");
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href") || link.getAttribute("data-link");
+      if (href) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 800);
+      }
+    });
+  });
+});
+</script>
+
+<style>
+body {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+body.fade-in {
+  opacity: 2;
+}
+body.fade-out {
+  opacity: 2;
+}
+</style>
+<script>
+  // أول ما الصفحة تفتح يظهر المحتوى تدريجيًا
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  // وظيفة الزرار: يعمل ترانزيشن ناعم قبل الانتقال
+  function enterSite(button) {
+    button.style.pointerEvents = "none"; // يمنع الضغط المتكرر
+    document.body.classList.remove("fade-in");
+    document.body.classList.add("fade-out");
+
+    // بعد انتهاء الترانزيشن، الانتقال للصفحة التانية
+    setTimeout(() => {
+      window.location.href = "farm.html";
+    }, 1000); // مدة التأثير بالمللي ثانية (1 ثانية)
+  }
+</script>
+
+<style>
+  body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  body.fade-in {
+    opacity: 1;
+  }
+
+  body.fade-out {
+    opacity: 0;
+  }
+</style>
+</body>
+</html>

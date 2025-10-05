@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+body {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+body.fade-in {
+  opacity: 1;
+}
+</style>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Farm - Cow Breeds for Milk Production</title>
+  <link rel="stylesheet" href="farm.css">
+
+  <style>
+    /* تأثير الظهور البطيء للصفحة */
+    body {
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      background-color: #f9fff9;
+    }
+    body.fade-in {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-content">
+      <h1> The Farm</h1>
+      <p><h2>Discover the world’s most remarkable dairy breeds — where nature, care, and productivity come together in harmony.</h2></p>
+      <div class="green-line"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="breeds-container">
+    <section class="breed" id="breed1">
+      <h2>1. Holstein Friesian</h2>
+      <p>The Holstein Friesian is the global icon of dairy farming. Originating from the Netherlands, it’s known for producing the highest volume of milk — smooth, pure, and perfect for fresh dairy products.</p>
+      <img src="1.jpg" alt="Holstein Friesian" onclick="openPanel('Holstein Friesian', '🩶 <b>Origin:</b> Netherlands<br>🥛 <b>Milk Yield:</b> 25–30 liters/day<br>💧 <b>Milk Type:</b> Low-fat, high volume<br>🌿 <b>Temperament:</b> Calm and highly adaptable.', this)">
+    </section>
+
+    <section class="breed" id="breed2">
+      <h2>2. Jersey</h2>
+      <p>Small but mighty, the Jersey cow produces milk rich in butterfat — perfect for cream, butter, and cheese lovers.</p>
+      <img src="2.jpg" alt="Jersey Cow" onclick="openPanel('Jersey', '🌴 <b>Origin:</b> Channel Islands<br>🥛 <b>Milk Yield:</b> 18–22 liters/day<br>🧈 <b>Milk Type:</b> High butterfat content<br>💛 <b>Feature:</b> Friendly and efficient.', this)">
+    </section>
+
+    <section class="breed" id="breed3">
+      <h2>3. Brown Swiss</h2>
+      <p>Strong, calm, and reliable — the Brown Swiss produces creamy, protein-rich milk ideal for fine cheese.</p>
+      <img src="3.jpg" alt="Brown Swiss Cow" onclick="openPanel('Brown Swiss', '🏔️ <b>Origin:</b> Switzerland<br>🥛 <b>Milk Yield:</b> 22–27 liters/day<br>🧀 <b>Milk Type:</b> Creamy, ideal for cheese<br>🕊️ <b>Personality:</b> Gentle and enduring.', this)">
+    </section>
+
+    <section class="breed" id="breed4">
+      <h2>4. Guernsey</h2>
+      <p>The “Golden Cow” of the dairy world, Guernsey milk glows with golden color thanks to natural beta-carotene richness.</p>
+      <img src="4.jpg" alt="Guernsey Cow" onclick="openPanel('Guernsey', '🌅 <b>Origin:</b> Channel Islands<br>🥛 <b>Milk Yield:</b> 20–25 liters/day<br>✨ <b>Milk Type:</b> Golden, rich in beta-carotene<br>💚 <b>Nature:</b> Gentle and intelligent.', this)">
+    </section>
+
+    <section class="breed" id="breed5">
+      <h2>5. Ayrshire</h2>
+      <p>Elegant and adaptable, Ayrshire cows produce balanced milk suitable for both drinking and dairy processing.</p>
+      <img src="5.jpg" alt="Ayrshire Cow" onclick="openPanel('Ayrshire', '🏴 <b>Origin:</b> Scotland<br>🥛 <b>Milk Yield:</b> 20–25 liters/day<br>⚖️ <b>Milk Type:</b> Balanced fat and protein<br>🌾 <b>Feature:</b> Hardy and efficient.', this)">
+    </section>
+
+    <section class="breed" id="breed6">
+      <h2>6. Red Sindhi</h2>
+      <p>Thriving in tropical climates, Red Sindhi cows produce rich milk and show impressive disease resistance.</p>
+      <img src="6.jpg" alt="Red Sindhi Cow" onclick="openPanel('Red Sindhi', '🔥 <b>Origin:</b> Pakistan<br>🥛 <b>Milk Yield:</b> 15–18 liters/day<br>🌞 <b>Feature:</b> Heat-tolerant, disease resistant<br>🧡 <b>Milk Type:</b> Thick and flavorful.', this)">
+    </section>
+
+    <section class="breed" id="breed7">
+      <h2>7. Sahiwal</h2>
+      <p>The pride of tropical dairy farming — Sahiwal cows produce rich, high-fat milk even in hot climates.</p>
+      <img src="7.jpg" alt="Sahiwal Cow" onclick="openPanel('Sahiwal', '🌾 <b>Origin:</b> India/Pakistan<br>🥛 <b>Milk Yield:</b> 18–25 liters/day<br>🍶 <b>Milk Type:</b> High fat, creamy texture<br>🌤️ <b>Strength:</b> Resilient in heat.', this)">
+    </section>
+
+    <section class="breed" id="breed8">
+      <h2>8. Tharparkar</h2>
+      <p>Born in the deserts of India, Tharparkar cows symbolize strength, providing steady milk under harsh conditions.</p>
+      <img src="8.jpg" alt="Tharparkar Cow" onclick="openPanel('Tharparkar', '🏜️ <b>Origin:</b> India<br>🥛 <b>Milk Yield:</b> 15–20 liters/day<br>☀️ <b>Feature:</b> Highly heat-resistant<br>💧 <b>Milk Type:</b> Mild flavor, consistent yield.', this)">
+    </section>
+  </main>
+
+  <!-- Side Panel -->
+  <div id="sidePanel" class="side-panel">
+    <button class="close-btn" onclick="closePanel()">×</button>
+    <h3 id="panelTitle">Breed Name</h3>
+    <p id="panelInfo">Information about the breed will appear here...</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 <b>The Virtual Farm</b> — Designed by <span>Youssef Faraag</span>
+  </footer>
+
+  <script>
+    // تشغيل تأثير الظهور عند تحميل الصفحة
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+    });
+
+    // وظائف فتح وغلق اللوحة الجانبية
+    function openPanel(title, info, imgElement) {
+      const sidePanel = document.getElementById("sidePanel");
+      const breeds = document.querySelectorAll(".breed");
+
+      breeds.forEach(breed => {
+        breed.classList.toggle("blur", !breed.contains(imgElement));
+      });
+
+      const rect = imgElement.getBoundingClientRect();
+      sidePanel.style.top = `${rect.top + window.scrollY}px`;
+      document.getElementById("panelTitle").innerHTML = title;
+      document.getElementById("panelInfo").innerHTML = info;
+      sidePanel.classList.add("active");
+    }
+
+    function closePanel() {
+      const sidePanel = document.getElementById("sidePanel");
+      sidePanel.classList.remove("active");
+      document.querySelectorAll(".breed").forEach(b => b.classList.remove("blur"));
+    }
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
+});
+</script>
+
+</body>
+</html>
