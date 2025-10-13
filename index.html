@@ -164,5 +164,22 @@ body.fade-out {
     opacity: 0;
   }
 </style>
+<script>
+  window.addEventListener("load", () => {
+  const logo = document.querySelector("img[src='logo.jpg.jpg']"); // اللوجو القديم
+  if (!logo) return;
+
+  setTimeout(() => {
+    logo.classList.add("logo-transition-strong");
+
+    // في منتصف الأنيميشن نبدل الصورة
+    setTimeout(() => {
+      logo.src = "logo2.jpg"; // اللوجو الجديد
+    }, 900); // نص المدة
+  }, 1000); // انتظار قبل بدء التحويل
+});
+
+</script>
+
 </body>
 </html>

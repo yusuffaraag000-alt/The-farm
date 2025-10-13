@@ -15,3 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+window.addEventListener("load", () => {
+  const oldLogo = document.getElementById("oldLogo");
+  const newLogo = document.getElementById("newLogo");
+
+  setTimeout(() => {
+    oldLogo.classList.add("fade-out");
+    newLogo.classList.add("fade-in");
+  }, 2000); // ← المدة قبل التبديل (2 ثانية)
+});
+
